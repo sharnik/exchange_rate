@@ -12,13 +12,6 @@ module ExchangeRate
     #
     # Returns Hash containing the rates.
     def import
-      data = open(source_url).read
-      puts parse_input_stream(data).inspect
-    end
-
-    private
-
-    def parse_input_stream
       raise "That's weird, it's supposed to be overridden."
     end
 

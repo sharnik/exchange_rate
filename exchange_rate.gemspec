@@ -11,6 +11,8 @@ Gem::Specification.new do |s|
     'http://github.com/sharnik/exchange_rate'
   s.license       = 'MIT'
 
+  s.add_runtime_dependency 'nokogiri'
+
   s.add_development_dependency 'minitest', '~> 5.0.8'
   s.add_development_dependency 'rake'
 
