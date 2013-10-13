@@ -1,6 +1,7 @@
 require_relative 'exchange_rate/importer'
 require_relative 'exchange_rate/xml_importer'
 require_relative 'exchange_rate/converter'
+require_relative 'exchange_rate/store'
 
 module ExchangeRate
 
