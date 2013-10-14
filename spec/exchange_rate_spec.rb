@@ -8,9 +8,8 @@ describe ExchangeRate do
   end
 
   it 'can get and display exchange rates' do
-    skip 'Not implemented yet.'
     ExchangeRate.update_rates
-    ExchangeRate.at('2013-10-08', 'CZK', 'GBP')
+    assert ExchangeRate.at('2013-10-08', 'CZK', 'GBP') == 30.283
   end
 end
 

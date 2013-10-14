@@ -21,7 +21,10 @@ module ExchangeRate
     #
     # Returns Float of the exchange rate.
     def at(date, currency_from, currency_to)
-      raise NotImplementedError
+      rate_from = currency_from == 'EUR' ? 1.0 : store.get_rate(date, currency_from)
+      rate_to = currency_to == 'EUR' ? 1.0 : store.get_rate(date, currency_to)
+
+      Converter.new(rate_from, rate_to).compute_rate
     end
 
     # Public: Allows to set store file.
