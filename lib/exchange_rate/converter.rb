@@ -1,10 +1,14 @@
 module ExchangeRate
   class Converter
-    attr_reader :currency_from, :currency_to
+    attr_reader :rate_from, :rate_to
 
-    def initialize(currency_from, currency_to)
-      @currency_from = currency_from
-      @currency_to = currency_to
+    def initialize(rate_from, rate_to)
+      @rate_from = rate_from
+      @rate_to = rate_to
+    end
+
+    def compute_rate
+      (@rate_from / @rate_to).round(4)
     end
 
   end

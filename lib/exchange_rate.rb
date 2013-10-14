@@ -42,11 +42,14 @@ module ExchangeRate
       @source = source
     end
 
-    private
-
+    # Public: Get the persistence engine.
+    #
+    # Returns Store.
     def store
       @store ||= Store.new
     end
+
+    private
 
     def source
       @source ||= 'http://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml'
