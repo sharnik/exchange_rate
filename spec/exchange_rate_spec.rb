@@ -11,5 +11,11 @@ describe ExchangeRate do
     ExchangeRate.update_rates
     assert ExchangeRate.at('2013-10-08', 'CZK', 'GBP') == 30.283
   end
+
+  it 'raise an exception when rate is not available' do
+    assert_raises(ExchangeRate::RateNotAvailable) do
+      ExchangeRate.at('2013-10-08', 'CZK', 'GBP')
+    end
+  end
 end
 
